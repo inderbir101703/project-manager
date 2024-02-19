@@ -61,13 +61,13 @@ setProjects((prevValue)=>{
   }
 
 
-    return   <div className="flex w-12/12">
+    return   <main className="flex w-12/12">
 <Sidebar handleAddProject={handleAddProject} projectList={projects} selectProject={selectProject}/>
-    <main className="flex flex-col w-9/12 items-center justify-start p-32">
+    <div className="flex flex-col w-9/12 items-center justify-start p-32">
         <ProjectListings ref={sideRef} project={selectedProject} handleAddTask={handleAddTask} tasks={tasks} handleRemoveProject={handleRemoveProject} handleRemoveTasks={handleRemoveTasks}/>
        <ProjectForm  ref={formRef} updateProjects={updateProjects} projectList={projects}/>
         
-    </main>
-     </div>
+    </div>
+     </main>
 }
 export default Bars
