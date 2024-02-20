@@ -23,6 +23,10 @@ projectList.forEach(element => {
     });
    return result
 }
+function handleclose(e){
+    e.preventDefault() 
+    ref.current.style.display="none"
+}
     return <form className="flex flex-col items-end hidden" ref={ref} {...props} onSubmit={(e)=>{  e.preventDefault() 
 
          if(checkTitleExists(projectData))
@@ -32,7 +36,7 @@ projectList.forEach(element => {
          }
         updateProjects(projectData)}}>
 <span>
-<UserButton addClasses="p-4 w-48 rounded-md bg-inherit hover:bg-stone-200 mx-4 ">Cancel</UserButton>
+<UserButton addClasses="p-4 w-48 rounded-md bg-inherit hover:bg-stone-200 mx-4 " onClick={handleclose}>Cancel</UserButton>
 <UserButton addClasses="bg-black text-stone-200 p-4 w-48 rounded-md"  type="submit" >save</UserButton>
 </span>
 <div>
